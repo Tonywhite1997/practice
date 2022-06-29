@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 50%;
+    border: 1px solid green;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+
+.name, .email{
+    /* border: 1px solid red; */
+    position: relative;
+    width: 80%;
+}
+
+input{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+span{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    pointer-events: none;
+    transition: all 500ms ease-in;
+}
+
+input:focus ~ span
+{
+    transform: translateY(-35px);
+    color: red;
+
+}
+
+input:valid ~ span{
+    transform: translateY(-35px);
+    color: red;
+
+}
+
+.example{
+    border: 2px solid green;
+    width: 50%;
+    height: 0;
+    overflow: hidden;
+    transition: all 500ms ease-in;
+    margin-bottom: 1em;
+}
+
+.expand{
+    padding: .5em 1em;
+}
+
+.show{
+    height: 150px;
+    transition: all 500ms ease-in;
+}
+
